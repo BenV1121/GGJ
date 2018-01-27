@@ -7,14 +7,16 @@ public class PlayerHealth : MonoBehaviour
 {
     public float lives = 5;
     public Text livesCount;
+    Renderer render;
 
     bool dead;
-    public float respawnTimer = 7;
+    public float respawnTimer = 2;
 
     void Start()
     {
         livesCount.text = "Lives: " + lives.ToString();
         dead = false;
+        render = GetComponent<Renderer>();
     }
 
     void Update()
@@ -22,8 +24,7 @@ public class PlayerHealth : MonoBehaviour
         if(Input.GetKeyDown("1"))
         {
             lives -= 1;
-            gameObject.SetActive(false);
-            transform.position = new Vector3(0, 4, 0);
+            render.enabled = false;
             dead = true;
             SetCountText();
         }
@@ -34,12 +35,19 @@ public class PlayerHealth : MonoBehaviour
         }
         else if (!dead)
         {
+            respawnTimer = 7;
+        }
 
+        if (respawnTimer <= 0)
+        {
+            dead = false;
+            render.enabled = true;
+            transform.position = new Vector3(0, -4, 0);
         }
 
         if(lives <= 0)
         {
-
+            // Gameover
         }
     }
 	
