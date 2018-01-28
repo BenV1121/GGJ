@@ -23,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
     public bool win;
     public bool end;
     public Image damageImage;
+    public GameObject shipModel;
 
     void Start()
     {
@@ -52,14 +53,14 @@ public class PlayerHealth : MonoBehaviour
                 blinkTimer -= Time.deltaTime;
                 if (blink && blinkTimer <= 0)
                 {
-                    render.enabled = false;
+                    shipModel.SetActive(false);
                     blink = false;
                     blinkTimer = blinkInterval;
 
                 }
                 else if (blinkTimer <= 0)
                 {
-                    render.enabled = true;
+                    shipModel.SetActive(true);
                     blink = true;
                     blinkTimer = blinkInterval;
                 }
@@ -67,7 +68,7 @@ public class PlayerHealth : MonoBehaviour
             else if (!dead)
             {
                 respawnTimer = respawnTimerMax;
-                render.enabled = true;
+                shipModel.SetActive(true);
                 blink = true;
             }
 
@@ -75,7 +76,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 dead = false;
                 transform.position = new Vector3(0, 0.5f, 0);
-                render.enabled = true;
+                shipModel.SetActive(true);
 
                 Shield();
                 blink = true;
