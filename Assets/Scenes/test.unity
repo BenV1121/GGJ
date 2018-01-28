@@ -334,28 +334,6 @@ Prefab:
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 489638090}
-    - target: {fileID: 114237729997143026, guid: 4e5a0d387dc27394b81600988ad0216f,
-        type: 2}
-      propertyPath: shipModel
-      value: 
-      objectReference: {fileID: 1095672040}
-    - target: {fileID: 1350468323981084, guid: 4e5a0d387dc27394b81600988ad0216f, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1512898235617212, guid: 4e5a0d387dc27394b81600988ad0216f, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1861627382913240, guid: 4e5a0d387dc27394b81600988ad0216f, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114754793494419926, guid: 4e5a0d387dc27394b81600988ad0216f,
-        type: 2}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 1095672041}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e5a0d387dc27394b81600988ad0216f, type: 2}
   m_IsPrefabParent: 0
@@ -631,16 +609,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9696af6aa4a1c724488411f961622043, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1095672040 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1292667159713126, guid: 4e5a0d387dc27394b81600988ad0216f,
-    type: 2}
-  m_PrefabInternal: {fileID: 806100492}
---- !u!95 &1095672041 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95589804196599176, guid: 4e5a0d387dc27394b81600988ad0216f,
-    type: 2}
-  m_PrefabInternal: {fileID: 806100492}
 --- !u!1001 &1133714564
 Prefab:
   m_ObjectHideFlags: 0
