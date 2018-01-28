@@ -32,6 +32,8 @@ public class Gun3Script : GunScript
     Light gunLight;                                 // Reference to the light component.
 
 
+    public int ammo;
+    public int ammoCount;
 
     private void Awake()
     {
@@ -47,6 +49,7 @@ public class Gun3Script : GunScript
         gunLight = GetComponent<Light>();
         player = GameObject.FindWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
+        ammoCount = ammo;
     }
 
     // Use this for initialization
@@ -189,8 +192,15 @@ public class Gun3Script : GunScript
                 // ... set the second position of the line renderer to the fullest extent of the gun's range.
                 gunLine3.SetPosition(1, shootRay3.origin + shootRay3.direction * range);
             }
-        }
 
+            ammoCount = ammoCount - 3;
+            if (ammoCount <= 0)
+            {
+                shootingControl.Switch(shootingControl.gun);
+            }
+
+
+        }
     }
 
     public override void DisableEffects()
@@ -209,6 +219,7 @@ public class Gun3Script : GunScript
         gunLine1.endWidth = endwidth;
         active = true;
         effectTimer = 0f;
+        ammoCount = ammo;
     }
 
     public override void SwitchOut()

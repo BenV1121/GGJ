@@ -43,7 +43,7 @@ public class ShieldController : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        Debug.Log("Health" + shieldHealth);
+        //Debug.Log("Health" + shieldHealth);
         shieldHealth = shieldHealth - amount;
         damaged = true;
         if (shieldHealth <= 0)

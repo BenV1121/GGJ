@@ -16,6 +16,9 @@ public class Gun4Script : GunScript
     public GameObject gunLine1Object;                           // Reference to the line renderer.
     private float effectTimer = 0f;
 
+    public int ammo;
+    public int ammoCount;
+
     private bool active = false;
     private LineRenderer gunLine1;
     Ray shootRay = new Ray();                       // A ray from the gun end forwards.
@@ -40,6 +43,7 @@ public class Gun4Script : GunScript
         gunLight = GetComponent<Light>();
         player = GameObject.FindWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
+        ammoCount = ammo;
     }
 
     // Use this for initialization
@@ -67,6 +71,7 @@ public class Gun4Script : GunScript
 
         if (timer >= timeBetweenBullets && Time.timeScale != 0 && !playerHealth.dead)
         {
+
 
             shootingControl.ResetTimer();
             effectTimer = 0f;
@@ -114,6 +119,11 @@ public class Gun4Script : GunScript
             //Set the second position of the line renderer to the fullest extent of the gun's range.
             gunLine1.SetPosition(1, shootRay.origin + shootRay.direction * range);
 
+            ammoCount = ammoCount - 1;
+            if (ammoCount <= 0)
+            {
+                shootingControl.Switch(shootingControl.gun);
+            }
         }
 
     }
@@ -132,6 +142,7 @@ public class Gun4Script : GunScript
         gunLine1.endWidth = endwidth;
         effectTimer = 0f;
         active = true;
+        ammoCount = ammo;
     }
 
     public override void SwitchOut()

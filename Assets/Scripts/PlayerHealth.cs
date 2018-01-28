@@ -13,6 +13,8 @@ public class PlayerHealth : MonoBehaviour
     Renderer render;
     public GameObject shield;
     ShieldController shieldController;
+    public GameObject gun;
+    PlayerShooting shootingController;
     public bool dead;
     public float respawnTimer;
     public float blinkInterval ;
@@ -25,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
         dead = false;
         render = GetComponent<Renderer>();
         shieldController = shield.GetComponent<ShieldController>();
+        shootingController = gun.GetComponent<PlayerShooting>();
         invincible = false;
         respawnTimer = respawnTimerMax;
         blink = true;
@@ -107,7 +110,29 @@ public class PlayerHealth : MonoBehaviour
 
     public void LootPickup(int lootenum)
     {
-        //TODO
+        //0 live, 1 shield, 2-8 guns
+        if (lootenum==0)
+        {
+            HealthRegen();
+        }
+        //0 live, 1 shield, 2-8 guns
+        if (lootenum == 1)
+        {
+            Shield();
+        }
+        if (lootenum == 3)
+        {
+            shootingController.Switch(2);
+        }
+        if (lootenum == 4)
+        {
+            shootingController.Switch(3);
+        }
+        if (lootenum == 5)
+        {
+            shootingController.Switch(4);
+        }
+
     }
 
     public void HealthRegen()

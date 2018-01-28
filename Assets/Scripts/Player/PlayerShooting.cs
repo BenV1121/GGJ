@@ -67,7 +67,7 @@ public class PlayerShooting : MonoBehaviour
         timer = 0f;
     }
 
-    private void Switch(int newgun)
+    public void Switch(int newgun)
     {
 
         script.SwitchOut();

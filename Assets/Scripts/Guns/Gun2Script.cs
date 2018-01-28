@@ -27,6 +27,9 @@ public class Gun2Script : GunScript
     GameObject player;
     PlayerHealth playerHealth;
 
+    public int ammo;
+    public int ammoCount;
+
     private void Awake()
     {
         // Create a layer mask for the Shootable layer.
@@ -40,6 +43,7 @@ public class Gun2Script : GunScript
 
         player = GameObject.FindWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
+        ammoCount = ammo;
     }
 
     // Use this for initialization
@@ -113,6 +117,13 @@ public class Gun2Script : GunScript
                 // ... set the second position of the line renderer to the fullest extent of the gun's range.
                 gunLine1.SetPosition(1, shootRay.origin + shootRay.direction * range);
             }
+
+            ammoCount = ammoCount - 1;
+            if (ammoCount <= 0)
+            {
+                shootingControl.Switch(shootingControl.gun);
+            }
+
         }
 
     }
@@ -131,6 +142,7 @@ public class Gun2Script : GunScript
         gunLine1.endWidth = endwidth;
         active = true;
         effectTimer = 0f;
+        ammoCount = ammo;
     }
 
     public override void SwitchOut()
