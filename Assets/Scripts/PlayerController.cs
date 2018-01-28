@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
 
         if(speedIsPoweredUp)
         {
-            transform.Translate(xMove * 3, yMove * 3, 0); // If speedIsPoweredUp is set to true, then the movment will triple
+            transform.Translate(xMove * 3, 0, yMove * 3); // If speedIsPoweredUp is set to true, then the movment will triple
             speedUpTimer -= 1 * Time.deltaTime;
 
             if (speedUpTimer <= 0)
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         else
-            transform.Translate(xMove, yMove, 0); // If not, then movement will be normal.
+            transform.Translate(xMove, 0, yMove); // If not, then movement will be normal.
 
         // IF the player is in this certain posiion or more/less than it, the player stay at that certain position, preventing it to go further out of the boundary.
         if (transform.position.x >= 13)
@@ -45,13 +45,13 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(-13, transform.position.y, transform.position.z);
         }
-        if (transform.position.y >= 8.5)
+        if (transform.position.z >= 10)
         {
-            transform.position = new Vector3(transform.position.x, 8.5f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y, 10);
         }
-        if (transform.position.y <= -6.5)
+        if (transform.position.z <= -3)
         {
-            transform.position = new Vector3(transform.position.x, -6.5f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y, -3);
         }
     }
 

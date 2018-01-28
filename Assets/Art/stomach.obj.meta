@@ -1,18 +1,19 @@
 fileFormatVersion: 2
-guid: 87f503eef0133634cafb8736b2a1f2f8
-timeCreated: 1517041473
+guid: 354481f5586c3db4f9c7e29cef82d784
+timeCreated: 1517097328
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: liver1
+    100000: stomach
     100002: //RootNode
-    400000: liver1
+    400000: stomach
     400002: //RootNode
-    2100000: liver1Mat
-    2300000: liver1
-    3300000: liver1
-    4300000: liver1
+    2100000: cane_fix_initialShadingGroup
+    2100002: initialShadingGroup
+    2300000: stomach
+    3300000: stomach
+    4300000: stomach
   externalObjects: {}
   materials:
     importMaterials: 1
