@@ -20,6 +20,8 @@ public class PlayerHealth : MonoBehaviour
     public float blinkInterval ;
     public float blinkTimer;
     private bool blink;
+    public bool win;
+    public bool end;
 
     void Start()
     {
@@ -32,67 +34,56 @@ public class PlayerHealth : MonoBehaviour
         respawnTimer = respawnTimerMax;
         blink = true;
         blinkTimer = 0;
-}
+        win = false;
+        end = false;
+
+    }
 
     void Update()
     {
-        if (Input.GetKeyDown("p"))
-        {
-            lives -= 1;
-            render.enabled = false;
-            dead = true;
-            SetCountText();
-        }
-
-        if (Input.GetKeyDown("="))
-        {
-            Shield();
-        }
-
-        if (Input.GetKeyDown("-"))
-        {
-            HealthRegen();
-        }
 
 
-        if (dead)
+        if (end != true)
         {
-            respawnTimer -= 1 * Time.deltaTime;
-            blinkTimer -= Time.deltaTime;
-            if (blink && blinkTimer <= 0)
+            if (dead)
             {
-                render.enabled = false;
-                blink = false;
-                blinkTimer = blinkInterval;
+                respawnTimer -= 1 * Time.deltaTime;
+                blinkTimer -= Time.deltaTime;
+                if (blink && blinkTimer <= 0)
+                {
+                    render.enabled = false;
+                    blink = false;
+                    blinkTimer = blinkInterval;
 
+                }
+                else if (blinkTimer <= 0)
+                {
+                    render.enabled = true;
+                    blink = true;
+                    blinkTimer = blinkInterval;
+                }
             }
-            else if(blinkTimer <= 0)
+            else if (!dead)
             {
+                respawnTimer = respawnTimerMax;
                 render.enabled = true;
                 blink = true;
-                blinkTimer = blinkInterval;
             }
-        }
-        else if (!dead)
-        {
-            respawnTimer = respawnTimerMax;
-            render.enabled = true;
-            blink = true;
-        }
 
-        if (respawnTimer <= 0)
-        {
-            dead = false;
-            transform.position = new Vector3(0, 0.5f, 0);
-            render.enabled = true;
+            if (respawnTimer <= 0)
+            {
+                dead = false;
+                transform.position = new Vector3(0, 0.5f, 0);
+                render.enabled = true;
 
-            Shield();
-            blink = true;
+                Shield();
+                blink = true;
+            }
         }
 
         if (lives <= 0)
         {
-            // Gameover
+            end = true;
         }
     }
 
@@ -177,5 +168,11 @@ public class PlayerHealth : MonoBehaviour
         }
 
 
+    }
+
+    public void Win()
+    {
+        end = true;
+        win = true;
     }
 }

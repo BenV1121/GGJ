@@ -38,23 +38,7 @@ public class PlayerShooting : MonoBehaviour
                 Shoot();
             }
 #endif
-        //Switch gun
-        if (Input.GetKeyDown("1"))
-        {
-            Switch(1);
-        }
-        if (Input.GetKeyDown("2"))
-        {
-            Switch(2);
-        }
-        if (Input.GetKeyDown("3"))
-        {
-            Switch(3);
-        }
-        if (Input.GetKeyDown("4"))
-        {
-            Switch(4);
-        }
+
     }
 
     public void DisableEffects()

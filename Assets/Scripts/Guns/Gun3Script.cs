@@ -74,7 +74,7 @@ public class Gun3Script : GunScript
     public override void Shoot(float timer, PlayerShooting shootingControl)
     {
 
-        if (timer >= timeBetweenBullets && Time.timeScale != 0 && !playerHealth.dead)
+        if (timer >= timeBetweenBullets && Time.timeScale != 0 && !playerHealth.dead && !playerHealth.end)
         {
 
             shootingControl.ResetTimer();
