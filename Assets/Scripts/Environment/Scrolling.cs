@@ -32,7 +32,7 @@ public class Scrolling : MonoBehaviour
 
         if (transform.position.z <= -65)
         {
-
+            playerHealth.Win();
             //transform.position = new Vector3(-2, transform.position.y, 65);
             //transform.rotation = new Quaternion(transform.rotation.x, -180, transform.rotation.z, 0);
             //upsideDown = true;
