@@ -24,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
     public bool end;
     public Image damageImage;
     public GameObject shipModel;
+    public Image[] LifeImages;
 
     void Start()
     {

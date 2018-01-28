@@ -162,7 +162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1402682269719452
 GameObject:
   m_ObjectHideFlags: 1
@@ -213,7 +213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1527299666208590
 GameObject:
   m_ObjectHideFlags: 1
@@ -362,7 +362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1878369550632572
 GameObject:
   m_ObjectHideFlags: 1
@@ -1231,7 +1231,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!82 &82197979381151818
 AudioSource:
@@ -1508,7 +1508,7 @@ MonoBehaviour:
   win: 0
   end: 0
   damageImage: {fileID: 0}
-  shipModel: {fileID: 0}
+  shipModel: {fileID: 1292667159713126}
 --- !u!114 &114288785520592242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1600,6 +1600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: 1
+  anim: {fileID: 95589804196599176}
 --- !u!114 &114783036288101782
 MonoBehaviour:
   m_ObjectHideFlags: 1
