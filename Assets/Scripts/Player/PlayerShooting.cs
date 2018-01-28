@@ -7,13 +7,15 @@ public class PlayerShooting : MonoBehaviour
     public int gun = 1;
     private GunScript script;
     private float timer = 0f;                                    // A timer to determine when to fire.
-    Animation anim;
+    public Animator anim;
 
     // Use this for initialization
     void Start()
     {
         script = GetComponent("Gun" + gun + "Script") as GunScript;
         script.SwitchIn();
+
+        //anim = GetComponentInParent<Animator>();
     }
 
     void Update()
@@ -29,7 +31,11 @@ public class PlayerShooting : MonoBehaviour
             script.Shoot(timer, this);
             // Reset the timer.
 
-            
+            anim.SetBool("isFiring", true);
+        }
+        else
+        {
+            anim.SetBool("isFiring", false);
         }
 #else
             // If there is input on the shoot direction stick and it's time to fire...
