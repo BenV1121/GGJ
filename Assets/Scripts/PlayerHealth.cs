@@ -5,9 +5,13 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float lives = 5;
+    public int maxLives = 5;
+    public int lives = 5;
     public Text livesCount;
+    private bool invincible = false;
     Renderer render;
+    public GameObject shield;
+    ShieldController shieldController;
 
     bool dead;
     public float respawnTimer = 2;
@@ -17,17 +21,30 @@ public class PlayerHealth : MonoBehaviour
         livesCount.text = "Lives: " + lives.ToString();
         dead = false;
         render = GetComponent<Renderer>();
+        shieldController = shield.GetComponent<ShieldController>();
+        invincible = false;
     }
 
     void Update()
     {
-        if(Input.GetKeyDown("p"))
+        if (Input.GetKeyDown("p"))
         {
             lives -= 1;
             render.enabled = false;
             dead = true;
             SetCountText();
         }
+
+        if (Input.GetKeyDown("="))
+        {
+            Shield();
+        }
+
+        if (Input.GetKeyDown("-"))
+        {
+            HealthRegen();
+        }
+
 
         if (dead)
         {
@@ -45,12 +62,12 @@ public class PlayerHealth : MonoBehaviour
             transform.position = new Vector3(0, -4, 0);
         }
 
-        if(lives <= 0)
+        if (lives <= 0)
         {
             // Gameover
         }
     }
-	
+
     void OnTriggerEnter()
     {
 
@@ -59,5 +76,39 @@ public class PlayerHealth : MonoBehaviour
     void SetCountText()
     {
         livesCount.text = "Lives: " + lives.ToString();
+    }
+
+
+
+    public void LootPickup(int lootenum)
+    {
+        //TODO
+    }
+
+    public void HealthRegen()
+    {
+        lives = lives + 1;
+        if (lives > maxLives)
+        {
+            lives = maxLives;
+        }
+        //TODO
+        //damageImage.color = regenColor;
+        //healthSlider.value = currentHealth;
+    }
+
+    public void Shield()
+    {
+        shieldController.ShieldEnable(this);
+    }
+
+    public void ShieldOn()
+    {
+        invincible = true;
+    }
+
+    public void ShieldOff()
+    {
+        invincible = false;
     }
 }
