@@ -9,12 +9,15 @@ public class PlayerHealth : MonoBehaviour
     public int lives = 5;
     public Text livesCount;
     private bool invincible = false;
+    public float respawnTimerMax;
     Renderer render;
     public GameObject shield;
     ShieldController shieldController;
-
-    bool dead;
-    public float respawnTimer = 2;
+    public bool dead;
+    public float respawnTimer;
+    public float blinkInterval ;
+    public float blinkTimer;
+    private bool blink;
 
     void Start()
     {
@@ -23,7 +26,10 @@ public class PlayerHealth : MonoBehaviour
         render = GetComponent<Renderer>();
         shieldController = shield.GetComponent<ShieldController>();
         invincible = false;
-    }
+        respawnTimer = respawnTimerMax;
+        blink = true;
+        blinkTimer = 0;
+}
 
     void Update()
     {
@@ -49,17 +55,36 @@ public class PlayerHealth : MonoBehaviour
         if (dead)
         {
             respawnTimer -= 1 * Time.deltaTime;
+            blinkTimer -= Time.deltaTime;
+            if (blink && blinkTimer <= 0)
+            {
+                render.enabled = false;
+                blink = false;
+                blinkTimer = blinkInterval;
+
+            }
+            else if(blinkTimer <= 0)
+            {
+                render.enabled = true;
+                blink = true;
+                blinkTimer = blinkInterval;
+            }
         }
         else if (!dead)
         {
-            respawnTimer = 7;
+            respawnTimer = respawnTimerMax;
+            render.enabled = true;
+            blink = true;
         }
 
         if (respawnTimer <= 0)
         {
             dead = false;
+            transform.position = new Vector3(0, 0.5f, 0);
             render.enabled = true;
-            transform.position = new Vector3(0, -4, 0);
+
+            Shield();
+            blink = true;
         }
 
         if (lives <= 0)
@@ -110,5 +135,22 @@ public class PlayerHealth : MonoBehaviour
     public void ShieldOff()
     {
         invincible = false;
+    }
+
+
+    public void TakeDamage()
+    {
+        if (!invincible && !dead)
+        {
+            dead = true;
+            lives = lives - 1;
+            SetCountText();
+        }
+        else if (invincible)
+        {
+            shieldController.TakeDamage(1);
+        }
+
+
     }
 }

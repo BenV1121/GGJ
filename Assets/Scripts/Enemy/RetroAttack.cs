@@ -12,8 +12,7 @@ public class RetroAttack : EnemyAttack
         // If the player has health to lose...
         if (playerHealth.lives > 0)
         {
-            // ... damage the player.
-            //TODO: playerHealth.TakeDamage(attackDamage);
+            playerHealth.TakeDamage();
         }
     }
 }

@@ -57,11 +57,11 @@
             }
 
             // If the player has zero or less health...
-            if(playerHealth.lives <= 0)
-            {
-                // ... tell the animator the player is dead.
-                anim.SetTrigger ("PlayerDead");
-            }
+            //if(playerHealth.lives <= 0)
+            //{
+            //    // ... tell the animator the player is dead.
+            //    anim.SetTrigger ("PlayerDead");
+            //}
         }
 
 

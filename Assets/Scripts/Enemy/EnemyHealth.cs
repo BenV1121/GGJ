@@ -78,29 +78,14 @@ public class EnemyHealth : MonoBehaviour
         capsuleCollider.isTrigger = true;
 
         // Tell the animator that the enemy is dead.
-        anim.SetTrigger("Dead");
+
 
         // Change the audio clip of the audio source to the death clip and play it (this will stop the hurt clip playing).
         enemyAudio.clip = deathClip;
         enemyAudio.Play();
+        Destroy(gameObject);
     }
 
 
-    public void StartSinking()
-    {
-        // Find and disable the Nav Mesh Agent.
-        GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
 
-        // Find the rigidbody component and make it kinematic (since we use Translate to sink the enemy).
-        GetComponent<Rigidbody>().isKinematic = true;
-
-        // The enemy should no sink.
-        isSinking = true;
-
-        // Increase the score by the enemy's score value.
-        ScoreManager.score += scoreValue;
-
-        // After 2 seconds destory the enemy.
-        Destroy(gameObject, 2f);
-    }
 }

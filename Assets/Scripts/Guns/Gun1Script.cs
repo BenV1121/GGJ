@@ -21,7 +21,8 @@ public class Gun1Script : GunScript
     Ray shootRay = new Ray();                       // A ray from the gun end forwards.
     int shootableMask;                              // A layer mask so the raycast only hits things on the shootable layer.
     ParticleSystem gunParticles;                    // Reference to the particle system.
-
+    GameObject player;
+    PlayerHealth playerHealth;
     AudioSource gunAudio;                           // Reference to the audio source.
     Light gunLight;                                 // Reference to the light component.
 
@@ -36,6 +37,9 @@ public class Gun1Script : GunScript
         gunLine1 = gunLine1Object.GetComponent<LineRenderer>();
         gunAudio = GetComponent<AudioSource>();
         gunLight = GetComponent<Light>();
+
+        player = GameObject.FindWithTag("Player");
+        playerHealth = player.GetComponent<PlayerHealth>();
     }
 
     // Use this for initialization
@@ -60,7 +64,7 @@ public class Gun1Script : GunScript
     public override void Shoot(float timer, PlayerShooting shootingControl)
     {
 
-        if (timer >= timeBetweenBullets && Time.timeScale != 0)
+        if (timer >= timeBetweenBullets && Time.timeScale != 0 && !playerHealth.dead)
         {
 
             shootingControl.ResetTimer();

@@ -24,6 +24,9 @@ public class Gun2Script : GunScript
     AudioSource gunAudio;                           // Reference to the audio source.
     Light gunLight;                                 // Reference to the light component.
 
+    GameObject player;
+    PlayerHealth playerHealth;
+
     private void Awake()
     {
         // Create a layer mask for the Shootable layer.
@@ -34,6 +37,9 @@ public class Gun2Script : GunScript
         gunLine1 = gunLine1Object.GetComponent<LineRenderer>();
         gunAudio = GetComponent<AudioSource>();
         gunLight = GetComponent<Light>();
+
+        player = GameObject.FindWithTag("Player");
+        playerHealth = player.GetComponent<PlayerHealth>();
     }
 
     // Use this for initialization
@@ -59,7 +65,7 @@ public class Gun2Script : GunScript
     public override void Shoot(float timer, PlayerShooting shootingControl)
     {
 
-        if (timer >= timeBetweenBullets && Time.timeScale != 0)
+        if (timer >= timeBetweenBullets && Time.timeScale != 0 && !playerHealth.dead)
         {
 
             shootingControl.ResetTimer();

@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class GunScript : MonoBehaviour
 {
 
+
     //Shoot
     public abstract void Shoot(float timer, PlayerShooting shootingControl);
 
