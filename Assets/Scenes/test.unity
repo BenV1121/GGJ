@@ -663,20 +663,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114820398496436042, guid: d6fda7ac115c1ce4d8ff1ae597703d97,
-        type: 2}
-      propertyPath: move
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114820398496436042, guid: d6fda7ac115c1ce4d8ff1ae597703d97,
-        type: 2}
-      propertyPath: rotating
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1335005829521856, guid: d6fda7ac115c1ce4d8ff1ae597703d97, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6fda7ac115c1ce4d8ff1ae597703d97, type: 2}
   m_IsPrefabParent: 0
