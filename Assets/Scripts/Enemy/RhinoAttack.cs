@@ -11,7 +11,7 @@ public class RhinoAttack : EnemyAttack
         if (playerHealth.lives > 0)
         {
             // ... damage the player.
-            //TODO: playerHealth.TakeDamage(attackDamage);
+            playerHealth.TakeDamage();
         }
     }
 }
