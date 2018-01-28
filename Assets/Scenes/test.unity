@@ -1080,12 +1080,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a83fe00ed400e469437600ff12e90c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerShot: 0
-  timeBetweenBullets: 0
-  range: 0
-  effectsDisplayTime: 0
-  startwidth: 0
-  endwidth: 0
+  damagePerShot: 40
+  timeBetweenBullets: 0.5
+  range: 20
+  effectsDisplayTime: 0.04
+  startwidth: 0.1
+  endwidth: 0.1
   faceLight: {fileID: 1907726176}
   gunLine1Object: {fileID: 735277535}
 --- !u!114 &1243276187
@@ -1100,12 +1100,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87514046f84d12940b9784f9fa5a1cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerShot: 0
-  timeBetweenBullets: 0
-  range: 0
-  effectsDisplayTime: 0
-  startwidth: 0
-  endwidth: 0
+  damagePerShot: 20
+  timeBetweenBullets: 0.15
+  range: 15
+  effectsDisplayTime: 0.03
+  startwidth: 0.05
+  endwidth: 0.05
   faceLight: {fileID: 1907726176}
   gunLine1Object: {fileID: 735277535}
   gunLine2Object: {fileID: 1781341860}
@@ -1122,12 +1122,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b6a7c96c96d17d4c8e0e1dcc3273221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerShot: 0
-  timeBetweenBullets: 0
-  range: 0
-  effectsDisplayTime: 0
-  startwidth: 0
-  endwidth: 0
+  damagePerShot: 50
+  timeBetweenBullets: 0.7
+  range: 8
+  effectsDisplayTime: 0.04
+  startwidth: 0.1
+  endwidth: 0.2
   gunLine1Object: {fileID: 735277535}
   faceLight: {fileID: 1907726176}
 --- !u!114 &1243276189
@@ -1144,7 +1144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damagePerShot: 20
   timeBetweenBullets: 0.15
-  range: 20
+  range: 15
   effectsDisplayTime: 0.03
   startwidth: 0.05
   endwidth: 0.05
@@ -1343,7 +1343,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 533414945
+  randomSeed: -2095609411
   InitialModule:
     serializedVersion: 3
     enabled: 1
