@@ -2,7 +2,7 @@
 
 public class BulletAttack : MonoBehaviour
 {
-    public float timeBetweenAttacks = 0.5f;     // The time in seconds between each attack.
+    public float timeBetweenGermBullets = 3f;     // The time in seconds between each attack.
     public int attackDamage = 10;               // The amount of health taken away per attack.
 
     protected Animator anim;                              // Reference to the animator component.
@@ -10,7 +10,7 @@ public class BulletAttack : MonoBehaviour
     protected PlayerHealth playerHealth;                  // Reference to the player's health.
     protected EnemyHealth enemyHealth;                    // Reference to this enemy's health.
     protected bool playerInRange;                         // Whether player is within the trigger collider and can be attacked.
-    protected float timer;                                // Timer for counting up to the next attack.
+    public static float timer;                                // Timer for counting up to the next attack.
 
     void Awake()
     {
@@ -47,7 +47,7 @@ public class BulletAttack : MonoBehaviour
     void Update()
     {
         // Add the time since Update was last called to the timer.
-        timer += Time.deltaTime;
+        BulletAttack.timer += Time.deltaTime;
 
         // If the timer exceeds the time between attacks, the player is in range and this enemy is alive...
         if (playerInRange)
@@ -77,9 +77,13 @@ public class BulletAttack : MonoBehaviour
     void Attack()
     {
         // Reset the timer.
-        timer = 0f;
+        if (BulletAttack.timer > timeBetweenGermBullets)
+        {
+            BulletAttack.timer = 0f;
 
-        // If the player has health to lose...
-        playerHealth.TakeDamage();
+            // If the player has health to lose...
+            transform.GetChild(1).GetComponent<ParticleSystem>().Play();
+            playerHealth.TakeDamage();
+        }
     }
 }

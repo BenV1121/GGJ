@@ -25,7 +25,7 @@ shot.GetComponent<Rigidbody>().velocity = angle * new Vector3(0, 0, 30);
 
 */
             var shot = Instantiate(bullet, new Vector3(transform.position.x, 0.5f, transform.position.z-3), new Quaternion());
-            shot.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, -30);
+            shot.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, -15);
         }
     }
 }
