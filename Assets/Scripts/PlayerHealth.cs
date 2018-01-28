@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown("1"))
+        if(Input.GetKeyDown("p"))
         {
             lives -= 1;
             render.enabled = false;
