@@ -26,6 +26,8 @@ public class PlayerHealth : MonoBehaviour
     public GameObject shipModel;
     public Image[] LifeImages;
 
+
+
     void Start()
     {
         livesCount.text = "Lives: " + lives.ToString();
@@ -114,15 +116,15 @@ public class PlayerHealth : MonoBehaviour
         {
             Shield();
         }
-        if (lootenum == 3)
+        if (lootenum == 2)
         {
             shootingController.Switch(2);
         }
-        if (lootenum == 4)
+        if (lootenum == 3)
         {
             shootingController.Switch(3);
         }
-        if (lootenum == 5)
+        if (lootenum == 4)
         {
             shootingController.Switch(4);
         }
