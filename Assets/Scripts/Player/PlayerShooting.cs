@@ -7,7 +7,7 @@ public class PlayerShooting : MonoBehaviour
     public int gun = 1;
     private GunScript script;
     private float timer = 0f;                                    // A timer to determine when to fire.
-
+    Animation anim;
 
     // Use this for initialization
     void Start()
@@ -29,6 +29,7 @@ public class PlayerShooting : MonoBehaviour
             script.Shoot(timer, this);
             // Reset the timer.
 
+            
         }
 #else
             // If there is input on the shoot direction stick and it's time to fire...

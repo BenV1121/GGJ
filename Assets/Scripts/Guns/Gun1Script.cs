@@ -67,6 +67,7 @@ public class Gun1Script : GunScript
         if (timer >= timeBetweenBullets && Time.timeScale != 0 && !playerHealth.dead && !playerHealth.end)
         {
 
+
             shootingControl.ResetTimer();
             effectTimer = 0f;
             // Play the gun shot audioclip.

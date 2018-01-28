@@ -305,6 +305,9 @@ MonoBehaviour:
   respawnTimer: 2
   blinkInterval: 0
   blinkTimer: 0
+  win: 0
+  end: 0
+  damageImage: {fileID: 0}
 --- !u!23 &485526527
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -466,19 +469,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400032, guid: d86d76cddd74f3e4a86da998a420c24d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400032, guid: d86d76cddd74f3e4a86da998a420c24d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400032, guid: d86d76cddd74f3e4a86da998a420c24d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400032, guid: d86d76cddd74f3e4a86da998a420c24d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.5
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400032, guid: d86d76cddd74f3e4a86da998a420c24d, type: 3}
       propertyPath: m_RootOrder
@@ -486,15 +489,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400032, guid: d86d76cddd74f3e4a86da998a420c24d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400032, guid: d86d76cddd74f3e4a86da998a420c24d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 400032, guid: d86d76cddd74f3e4a86da998a420c24d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: d86d76cddd74f3e4a86da998a420c24d, type: 3}
       propertyPath: m_Controller
