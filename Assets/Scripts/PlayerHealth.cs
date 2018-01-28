@@ -22,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
     private bool blink;
     public bool win;
     public bool end;
+    public Image damageImage;
 
     void Start()
     {
