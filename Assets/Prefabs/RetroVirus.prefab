@@ -7397,7 +7397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 0.5
   attackDamage: 10
-  bullet: {fileID: 4284795018998996, guid: 5410623bb53b24243906cf3d6046732c, type: 2}
+  bullet: {fileID: 4988771923749672, guid: 3584726ff4c9d6f458f2bde60f46170b, type: 2}
 --- !u!114 &114881316365630850
 MonoBehaviour:
   m_ObjectHideFlags: 1
