@@ -14,6 +14,9 @@ public class ShieldController : MonoBehaviour
     //public Image damageImage;
     //public Color shieldColor;
     //public float flashSpeed;
+    public Material goodShield;
+    public Material badShield;
+    
 
     // Use this for initialization
     void Start()
@@ -50,7 +53,11 @@ public class ShieldController : MonoBehaviour
         {
             ShieldDisable();
         }
-
+        else if (shieldHealth == 1)
+        {
+            SkinnedMeshRenderer skin = GetComponent<SkinnedMeshRenderer>();
+            skin.material = badShield;
+        }
     }
 
     public void ShieldEnable(PlayerHealth playerHealth)
@@ -62,7 +69,10 @@ public class ShieldController : MonoBehaviour
         SphereCollider collider = GetComponent<SphereCollider>();
         collider.enabled = true;
         SkinnedMeshRenderer skin = GetComponent<SkinnedMeshRenderer>();
+        skin.material = goodShield;
         skin.enabled = true;
+        
+        //skin.material =
         //damageImage.color = shieldColor;
     }
 
