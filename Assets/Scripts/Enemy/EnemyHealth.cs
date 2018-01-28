@@ -52,7 +52,7 @@ public class EnemyHealth : MonoBehaviour
         enemyAudio.Play();
 
         // Reduce the current health by the amount of damage sustained.
-        currentHealth -= amount;
+        currentHealth -= 999;
 
         // Set the position of the particle system to where the hit was sustained.
         hitParticles.transform.position = hitPoint;
