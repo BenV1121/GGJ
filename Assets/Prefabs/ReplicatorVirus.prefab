@@ -10,7 +10,7 @@ GameObject:
   - component: {fileID: 422006}
   - component: {fileID: 13770500}
   m_Layer: 0
-  m_Name: Hellephant
+  m_Name: Replicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -293,7 +293,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153412}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: b77f122f451a2394898a24191c26107c, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 65f0437e69837b2429e0a52faf61080b, type: 3}
   m_Controller: {fileID: 22100000, guid: 19b1058b58d5e314bb115a937b9bcf48, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -423,8 +423,8 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 20c2c861010d0ce49a4716087f02535e, type: 2}
-  - {fileID: 2100000, guid: 51d14e0fd3936be48bf8d5031d3e24c7, type: 2}
+  - {fileID: 2100000, guid: 5f0ed045d430520488ac06a491269313, type: 2}
+  - {fileID: 2100000, guid: 5f0ed045d430520488ac06a491269313, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -448,7 +448,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4300000, guid: b77f122f451a2394898a24191c26107c, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 65f0437e69837b2429e0a52faf61080b, type: 3}
   m_Bones: []
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
