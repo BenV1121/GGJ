@@ -2,8 +2,6 @@
 
 public class RetroAttack : EnemyAttack
 {
-    public Transform bullet;
-
     override protected void Attack()
     {
         // Reset the timer.
