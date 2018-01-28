@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Scrolling : MonoBehaviour
 {
-    float move = -.5f;
+    public float move = -.5f;
     public bool upsideDown = false;
     public bool rotating = false;
 	
