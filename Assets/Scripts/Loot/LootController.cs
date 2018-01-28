@@ -8,6 +8,8 @@ public class LootController : MonoBehaviour
     GameObject player;                          // Reference to the player GameObject.
     PlayerHealth playerHealth;
     public int lootenum;
+    public float scrollingSpeed;
+
     // Use this for initialization
     void Start()
     {
@@ -18,7 +20,7 @@ public class LootController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        transform.Translate(0, 0, scrollingSpeed * Time.deltaTime);
     }
 
     void OnTriggerEnter(Collider other)
