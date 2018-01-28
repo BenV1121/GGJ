@@ -1,0 +1,31 @@
+atomVersion 1.0;
+mayaVersion 2018;
+mayaSceneFile C:/gj_player/ship_player_04.mb;
+timeUnit Unknown Time Unit;
+linearUnit m;
+angularUnit deg;
+startTime 0;
+endTime 20;
+dagNode {
+  polySurface54 1 1;
+  static rotate.rx rotateX 0;
+  { 0 }
+  static rotate.ry rotateY 1;
+  { 0 }
+  static rotate.rz rotateZ 2;
+  { 0 }
+  static scale.sx scaleX 3;
+  { 65.739047 }
+  static scale.sy scaleY 4;
+  { 65.739047 }
+  static scale.sz scaleZ 5;
+  { 65.739047 }
+  static translate.tx translateX 6;
+  { -0.083644876 }
+  static translate.ty translateY 7;
+  { 0 }
+  static translate.tz translateZ 8;
+  { 0 }
+  static v visibility 9;
+  { 1 }
+}
