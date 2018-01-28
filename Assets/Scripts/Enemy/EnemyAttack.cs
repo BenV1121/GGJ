@@ -1,8 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-namespace CompleteProject
-{
     public abstract class EnemyAttack : MonoBehaviour
     {
         public float timeBetweenAttacks = 0.5f;     // The time in seconds between each attack.
@@ -60,7 +57,7 @@ namespace CompleteProject
             }
 
             // If the player has zero or less health...
-            if(playerHealth.currentHealth <= 0)
+            if(playerHealth.lives <= 0)
             {
                 // ... tell the animator the player is dead.
                 anim.SetTrigger ("PlayerDead");
@@ -70,4 +67,3 @@ namespace CompleteProject
 
         abstract protected void Attack();
     }
-}
