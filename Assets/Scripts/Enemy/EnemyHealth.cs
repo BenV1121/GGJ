@@ -8,6 +8,10 @@ public class EnemyHealth : MonoBehaviour
     public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
     public AudioClip deathClip;                 // The sound to play when the enemy dies.
 
+    public GameObject loot;
+
+    //0 live, 1 shield, 2-8 guns, 9 random
+    public float[] lootrates;
 
     Animator anim;                              // Reference to the animator.
     AudioSource enemyAudio;                     // Reference to the audio source.
@@ -27,6 +31,7 @@ public class EnemyHealth : MonoBehaviour
 
         // Setting the current health when the enemy first spawns.
         currentHealth = startingHealth;
+        lootrates = new float[]{0.05f, 0.05f, 0.1f, 0.1f,0.1f,0f,0f,0f,0f,0f };
     }
 
 
@@ -83,6 +88,19 @@ public class EnemyHealth : MonoBehaviour
         // Change the audio clip of the audio source to the death clip and play it (this will stop the hurt clip playing).
         enemyAudio.clip = deathClip;
         enemyAudio.Play();
+
+        for (int i = 0; i < lootrates.Length; i++)
+        {
+            float rng = Random.Range(0.0f, 1.0f);
+            if (lootrates[i] >= rng)
+            {
+                GameObject lootGenerated = Instantiate(loot, this.transform.position, Quaternion.identity);
+                LootController lootcontrol = lootGenerated.GetComponent<LootController>();
+                lootcontrol.SetLoot(i);
+                break;
+            }
+        }
+
         Destroy(gameObject);
     }
 

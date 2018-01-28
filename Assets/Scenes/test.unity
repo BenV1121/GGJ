@@ -152,6 +152,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 20088460451072288, guid: 0724b0c1ffd639148b7dca92ababc488,
+        type: 2}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20088460451072288, guid: 0724b0c1ffd639148b7dca92ababc488,
+        type: 2}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 20088460451072288, guid: 0724b0c1ffd639148b7dca92ababc488,
+        type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: 0.59607846
+      objectReference: {fileID: 0}
+    - target: {fileID: 20088460451072288, guid: 0724b0c1ffd639148b7dca92ababc488,
+        type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20088460451072288, guid: 0724b0c1ffd639148b7dca92ababc488,
+        type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: 0.59607846
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0724b0c1ffd639148b7dca92ababc488, type: 2}
   m_IsPrefabParent: 0
@@ -298,6 +323,31 @@ Prefab:
       propertyPath: livesCount
       value: 
       objectReference: {fileID: 2038181474}
+    - target: {fileID: 108590835583412848, guid: 4e5a0d387dc27394b81600988ad0216f,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 114288785520592242, guid: 4e5a0d387dc27394b81600988ad0216f,
+        type: 2}
+      propertyPath: ammo
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114366647731418922, guid: 4e5a0d387dc27394b81600988ad0216f,
+        type: 2}
+      propertyPath: ammo
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 114798549432339264, guid: 4e5a0d387dc27394b81600988ad0216f,
+        type: 2}
+      propertyPath: ammo
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114237729997143026, guid: 4e5a0d387dc27394b81600988ad0216f,
+        type: 2}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 921230721}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e5a0d387dc27394b81600988ad0216f, type: 2}
   m_IsPrefabParent: 0
@@ -518,6 +568,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b10c4670dce6c824592af8d9a0cf8db6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &921230721 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1350468323981084, guid: 4e5a0d387dc27394b81600988ad0216f,
+    type: 2}
+  m_PrefabInternal: {fileID: 806100492}
 --- !u!4 &933997770 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4281378370862634, guid: 3fffe5fa8b44c7c48ac986d7435dfd26,
