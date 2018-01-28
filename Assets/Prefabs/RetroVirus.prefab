@@ -35,6 +35,7 @@ GameObject:
   - component: {fileID: 8200000}
   - component: {fileID: 11400006}
   - component: {fileID: 114462023713022582}
+  - component: {fileID: 114881316365630850}
   m_Layer: 9
   m_Name: RetroVirus
   m_TagString: Untagged
@@ -7397,3 +7398,14 @@ MonoBehaviour:
   timeBetweenAttacks: 0.5
   attackDamage: 10
   bullet: {fileID: 4284795018998996, guid: 5410623bb53b24243906cf3d6046732c, type: 2}
+--- !u!114 &114881316365630850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5174f75ca1d20c74d9e3807857d6a6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

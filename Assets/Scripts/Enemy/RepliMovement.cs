@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace CompleteProject
 {
-    public class EnemyMovement : MonoBehaviour
+    public class RepliMovement : MonoBehaviour
     {
         Transform player;               // Reference to the player's position.
         PlayerHealth playerHealth;      // Reference to the player's health.

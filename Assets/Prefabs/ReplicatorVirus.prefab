@@ -84,6 +84,7 @@ GameObject:
   - component: {fileID: 11402556}
   - component: {fileID: 11415352}
   - component: {fileID: 114469066474394890}
+  - component: {fileID: 114000649320726948}
   m_Layer: 9
   m_Name: ReplicatorVirus
   m_TagString: Untagged
@@ -7400,6 +7401,17 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 153412}
   m_IsPrefabParent: 1
+--- !u!114 &114000649320726948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd20c4f375f611439d16026749626c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114469066474394890
 MonoBehaviour:
   m_ObjectHideFlags: 1
