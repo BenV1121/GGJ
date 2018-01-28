@@ -60,7 +60,7 @@ namespace CompleteProject
             }
 
             // If the player has zero or less health...
-            if(playerHealth.currentHealth <= 0)
+            if(playerHealth.lives <= 0)
             {
                 // ... tell the animator the player is dead.
                 anim.SetTrigger ("PlayerDead");

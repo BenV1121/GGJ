@@ -28,7 +28,7 @@ namespace CompleteProject
         void Update ()
         {
             // If the enemy and the player have health left...
-            if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
+            if(enemyHealth.currentHealth > 0 && playerHealth.lives > 0)
             {
                 // ... set the destination of the nav mesh agent to the player.
                 Vector3 dest = player.position;
