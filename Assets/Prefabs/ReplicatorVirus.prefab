@@ -355,7 +355,7 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 50
   deathClip: {fileID: 8300000, guid: 8c615fd0429f34edf85539d70279360d, type: 3}
-  loot: {fileID: 1230727668893940, guid: a37b61edd0f973f48b5a58afd4360d71, type: 2}
+  loot: {fileID: 1442607233930516, guid: a37b61edd0f973f48b5a58afd4360d71, type: 2}
   lootrates: []
 --- !u!114 &11415352
 MonoBehaviour:
