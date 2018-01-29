@@ -338,7 +338,7 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 10
   deathClip: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
-  loot: {fileID: 1230727668893940, guid: a37b61edd0f973f48b5a58afd4360d71, type: 2}
+  loot: {fileID: 1442607233930516, guid: a37b61edd0f973f48b5a58afd4360d71, type: 2}
   lootrates: []
 --- !u!114 &11400006
 MonoBehaviour:
@@ -3988,7 +3988,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 0, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4837,7 +4837,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -7259,7 +7259,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 2fecc81ffad55034a84d9d6a9b00276c, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -7313,7 +7313,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 6ee2e7dac69d8e94f872149c3dfe1b26, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
