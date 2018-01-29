@@ -16,12 +16,27 @@ public class ShieldController : MonoBehaviour
     //public float flashSpeed;
     public Material goodShield;
     public Material badShield;
-    
+    public Image[] shieldIcons;
 
     // Use this for initialization
     void Start()
     {
+        CheckShieldAmount();
+    }
 
+    void CheckShieldAmount()
+    {
+        for (int i = 0; i < shieldMaxBlock; i++)
+        {
+            if(shieldHealth <= i)
+            {
+                shieldIcons[i].enabled = false;
+            }
+            else
+            {
+                shieldIcons[i].enabled = true;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -42,6 +57,10 @@ public class ShieldController : MonoBehaviour
 
         //// Reset the damaged flag.
         //damaged = false;
+        if(shieldOn == true)
+        {
+            CheckShieldAmount();
+        }
     }
 
     public void TakeDamage(int amount)
@@ -52,12 +71,15 @@ public class ShieldController : MonoBehaviour
         if (shieldHealth <= 0)
         {
             ShieldDisable();
+
         }
         else if (shieldHealth == 1)
         {
             SkinnedMeshRenderer skin = GetComponent<SkinnedMeshRenderer>();
             skin.material = badShield;
         }
+
+        CheckShieldAmount();
     }
 
     public void ShieldEnable(PlayerHealth playerHealth)
@@ -71,7 +93,9 @@ public class ShieldController : MonoBehaviour
         SkinnedMeshRenderer skin = GetComponent<SkinnedMeshRenderer>();
         skin.material = goodShield;
         skin.enabled = true;
-        
+
+        CheckShieldAmount();
+
         //skin.material =
         //damageImage.color = shieldColor;
     }

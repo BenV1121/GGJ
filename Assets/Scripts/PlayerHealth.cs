@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
     public bool end;
     public Image damageImage;
     public GameObject shipModel;
-    public Image[] LifeImages;
+    public Image[] lifeImages;
 
     void Start()
     {
@@ -40,6 +40,22 @@ public class PlayerHealth : MonoBehaviour
         win = false;
         end = false;
 
+        CheckHealthAmount();
+    }
+
+    void CheckHealthAmount()
+    {
+        for (int i = 0; i < maxLives; i++)
+        {
+            if(lives <= i)
+            {
+                lifeImages[i].enabled = false;
+            }
+            else
+            {
+                lifeImages[i].enabled = true;
+            }
+        }
     }
 
     void Update()
@@ -164,6 +180,18 @@ public class PlayerHealth : MonoBehaviour
             dead = true;
             lives = lives - 1;
             SetCountText();
+
+            for (int i = 0; i < maxLives; i++)
+            {
+                if (lives <= i)
+                {
+                    lifeImages[i].enabled = false;
+                }
+                else
+                {
+                    lifeImages[i].enabled = true;
+                }
+            }
         }
         else if (invincible)
         {
